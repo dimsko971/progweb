@@ -1,0 +1,215 @@
+@font-face{
+	font-family: "test";
+	//src: url('AncienAd.ttf');
+
+}
+
+body {
+    background:url(Images/background.png) no-repeat center fixed;
+    background-size:cover;
+}
+
+title{
+	
+}
+
+h1 {
+	color:white;
+	font-family: test;
+    text-align:center;
+}
+
+#divR {
+    height:75%;
+    text-align:center;
+    padding:5%;
+    margin:5%;
+    margin-bottom: 20px;
+}
+
+#tableRecherche {
+	background-color:lightblue;
+	border-radius: 10px;
+	text-align: center;
+	padding: 5%;
+	margin:5%;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+tr {
+    padding: 50px
+}
+
+p, div > a {
+    text-align: center;
+}
+
+.selectRech {
+    width: 400px;
+	height: 35px;
+	border: solid;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	margin:10px;
+}
+
+.tabForm{
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	padding: 10px;
+	margin-top: 5px;
+	border-radius:10px;
+
+}
+
+#formation{
+	background-color: lightblue;
+	width: 80%;
+	height: 150px;
+	margin: 10px;
+	border: solid;
+	border-radius: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#formation > titleF{
+	text-align: left;
+	color: black;
+	margin-left: 10px;
+	text-decoration: underline;
+}
+
+#formation p{
+	text-align: left;
+}
+
+
+kykyzer{
+	color:white;
+	text-align: center;
+}
+
+.submit {
+	background-color:lightgrey;
+	width: 90%;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	border:solid 3px;
+	border-radius: 10px;
+	padding:10px;
+}
+
+
+.bouton {
+	width:300px;
+	height:35px;
+	background:#fafafa;
+	box-shadow:2px 2px 8px #aaa;
+	font:bold 13px Arial;
+	border-radius:10px;
+	color:#555;
+}
+
+.bouton:hover {
+	background-color:lightblue;
+}
+
+.boutonT
+{
+    color:#0000ff;
+    font-size:24px;
+    cursor:pointer;
+}
+.boutonT:hover
+{
+    text-decoration:underline;
+    color:red;
+}
+.texte
+{
+    padding:10px;
+    color:#333333;
+}
+.texte:hover
+{
+    color:#000000;
+}
+
+.selectRechF {
+    width: 300px;
+	height: 35px;
+	border: solid;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	margin:10px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 10px;
+	padding: 10px;
+	overflow: hidden;
+	background-color: #555;
+  	position: sticky;
+  	top: 0;
+}
+
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+	
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+h1 a {
+	text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: lightblue;
+}
+
+#map {
+
+}
+
+#mapP {
+	height: 500px;
+	margin: 5px;
+	padding: 10px;
+	left: 10px;
+}
+
+#map script{
+	left: 100px;
+	z-index: -1;
+}
+
+#formMap{
+	overflow: hidden;
+	width: 200px;
+	height: 500px;
+	padding: 5px;
+	margin-right: 10px;
+	background-color: #aaaaaa;
+	border: solid;
+}
+
+#formMap h3 {
+	text-align: center;
+}

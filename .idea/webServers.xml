@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="181b4236-d79f-4335-a752-82073b340e2b" name="etud.u-pem.fr" url="http://perso-etudiant.u-pem.fr">
+        <fileTransfer host="perso-etudiant.u-pem.fr" port="21" rootFolder="/mnt/traban_home/3in2/dghocane/WWW-perso/progweb">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

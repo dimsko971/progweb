@@ -1,0 +1,135 @@
+html, body, #mapid{
+ margin: 0px;
+ margin-top: -8px;
+ padding: 0px;
+ height: 70%; 
+ width: 100%;
+background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+color: #9A625B;
+
+ }
+body {
+overflow:scroll;
+ }
+h1 {
+
+  margin: 1rem;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all .2s linear;
+  text-align: center;
+  padding: 2rem 3rem;
+
+  margin: 0 0 2rem 0;
+  font-size: 2rem;
+background-image: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
+  color: white;
+  font-family: Steelfish;
+ }
+ 
+ h1:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
+  
+}
+ 
+@media screen and (min-width: 300px) {
+  h1 {
+    flex: 1 1 calc(50% - 2rem);
+
+  }
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    flex: 1 1 calc(33% - 2rem);
+  
+  }
+}
+ 
+.header{
+     
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 40px;
+    line-height:1px;
+    background-color: #EADFDF;
+    
+
+}
+#navigation {
+  margin: 3 ;
+  padding: 0 ;
+  list-style: none ;
+  text-align: center ;
+}
+
+#navigation li {
+  display: inline;
+    margin-right: 10px ;
+  background: #c00 url(image2.jpg) left top no-repeat ;
+  font: 1em "Trebuchet MS",Arial,sans-serif ;
+  line-height: 1em ;
+  padding: 4px 20px ;
+  text-align: center ;
+  height: 1.8em;
+  text-decoration: none ;
+}
+#navigation li a:hover, #navigation li a:focus, #navigation li a:active {
+  background: #900 url(image2.jpg) left top no-repeat ;
+   text-decoration: underline ;
+}
+form{
+text-align: center;
+}
+
+fieldset {
+
+ border:1px solid white;
+ margin-bottom: 15px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+ }
+ 
+p{
+text-align: center;
+}
+ 
+legend {
+ color:white;
+ font-weight:bold;
+ font-family: URW Chancery L, cursive; 
+  font-size: 170%;
+ }
+
+label {
+  width: 110px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px;
+
+}
+select {
+  width: 200px;
+}
+
+.button {
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+
+}
+
+table
+{
+    border-collapse: collapse;
+}
+td, th
+{
+    border: 1px solid black;
+}

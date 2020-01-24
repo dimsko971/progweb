@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Ta futur formation</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.29" />
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="JavaScript.js"></script>
+</head>
+
+	<body>
+	    <h1>Trouve ta future formation !!</h1>
+	    <div>
+	        <FORM  method="post" action="recherche.html">
+	
+				<table id="tableRecherche" >
+					<div id="divR">
+						
+						<div class="submit">
+							<input type="submit" value="Rechercher" class="bouton">
+							<input type="reset" value="Réinitialisé la recherche" class="bouton">
+						</div>
+						</br>
+						
+						<SELECT class="selectRech" >
+							<OPTION value="" disabled selected hidden>Niveau d'etude</OPTION>
+							<OPTION>aucun</OPTION>
+							<OPTION>bac</OPTION>
+							<OPTION>bac+1</OPTION>
+							<OPTION>bac+2</OPTION>
+							<OPTION>bac+3</OPTION>
+							<OPTION>bac+4</OPTION>
+							<OPTION>bac+5</OPTION>
+						</SELECT>
+						</br>
+						
+						<SELECT class="selectRech" >
+							<OPTION value="" disabled selected hidden>Domaines d'activités</OPTION>
+							<OPTION>Tous</OPTION>
+							<OPTION>bac</OPTION>
+							<OPTION>bac+1</OPTION>
+							<OPTION>bac+2</OPTION>
+							<OPTION>bac+3</OPTION>
+							<OPTION>bac+4</OPTION>
+							<OPTION>bac+5</OPTION>
+						</SELECT>
+							</br>
+						
+						<input type="text" placeholder="Localité" class="selectRech">
+							</br>
+						
+						<span class="boutonT" id="bouton" onclick="javascript:afficher_cacher('texte');">Affiner la recherche</span>
+							<div id="texte" class="texte">
+								<SELECT class="selectRech" >
+									<OPTION value="" disabled selected hidden>Académie</OPTION>
+									<OPTION>aucun</OPTION>
+									<OPTION>bac</OPTION>
+									<OPTION>bac+1</OPTION>
+									<OPTION>bac+2</OPTION>
+									<OPTION>bac+3</OPTION>
+									<OPTION>bac+4</OPTION>
+									<OPTION>bac+5</OPTION>
+								</SELECT>
+								</br>
+
+								<SELECT class="selectRech" >
+									<OPTION value="" disabled selected hidden>Etablissement</OPTION>
+									<OPTION>aucun</OPTION>
+									<OPTION>bac</OPTION>
+									<OPTION>bac+1</OPTION>
+									<OPTION>bac+2</OPTION>
+									<OPTION>bac+3</OPTION>
+									<OPTION>bac+4</OPTION>
+									<OPTION>bac+5</OPTION>
+								</SELECT>
+							</div>
+						     
+					    <script type="text/javascript">
+					    //<!--
+					        afficher_cacher('texte');
+					    //-->
+					    </script>	
+					    				
+						</div>
+				</table>
+	        </FORM>
+	    </div>
+	</body>
+</html>
