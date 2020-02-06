@@ -213,3 +213,22 @@ li a:hover:not(.active) {
 #formMap h3 {
 	text-align: center;
 }
+
+footer {
+	font-size: 16px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+	height: 38px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	color: white;
+}
+
+.footerLink {
+	color: white;
+	text-decoration: none;
+}
