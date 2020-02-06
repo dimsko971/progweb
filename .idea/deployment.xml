@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="etud.u-pem.fr">
+  <component name="PublishConfigData" autoUpload="Always" serverName="etud.u-pem.fr" uploadOnCheckin="181b4236-d79f-4335-a752-82073b340e2b">
     <serverData>
       <paths name="etud.u-pem.fr">
         <serverdata>
@@ -10,6 +10,7 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="etud.u-pem.fr" />
     <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

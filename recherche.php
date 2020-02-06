@@ -1,31 +1,32 @@
 <?php require('start.php'); ?>
 <?php
 
-if (isset($_URLstat)){
-    echo 'existe';
+if (isset($_GET['linkForm'])){
+    echo "deja creer";
+    $_URL_dyn = $_GET['linkForm'];
 }else{
+    echo "Il faut creer";
     $_URLstat = "https://data.enseignementsup-recherche.gouv.fr/api/records/1.0/search/?dataset=fr-esr-principaux-diplomes-et-formations-prepares-etablissements-publics&rows=3000&sort=-rentree_lib&facet=rentree_lib&facet=etablissement_type2&facet=etablissement_type_lib&facet=etablissement&facet=etablissement_lib&facet=champ_statistique&facet=dn_de_lib&facet=cursus_lmd_lib&facet=diplome_rgp&facet=diplome_lib&facet=typ_diplome_lib&facet=diplom&facet=niveau_lib&facet=disciplines_selection&facet=gd_disciscipline_lib&facet=discipline_lib&facet=sect_disciplinaire_lib&facet=spec_dut_lib&facet=localisation_ins&facet=com_etab&facet=com_etab_lib&facet=uucr_etab&facet=uucr_etab_lib&facet=dep_etab&facet=dep_etab_lib&facet=aca_etab&facet=aca_etab_lib&facet=reg_etab&facet=reg_etab_lib&facet=com_ins&facet=com_ins_lib&facet=uucr_ins&facet=dep_ins&facet=dep_ins_lib&facet=aca_ins&facet=aca_ins_lib&facet=reg_ins&facet=reg_ins_lib&facet=reg_diplome_lib&refine.rentree_lib=2017-18";
-    echo 'creer';
+    $_URL_dyn = $_URLstat;
+    if (isset($_POST['niveau'])){
+        $_URL_dyn = $_URL_dyn."&refine.niveau_lib=".$_POST['niveau'];
+    }
+    if (isset($_POST['domaine'])){
+        $_URL_dyn = $_URL_dyn."&refine.sect_disciplinaire_lib=".$_POST['domaine'];
+    }
+    if (isset($_POST['region'])){
+        $_URL_dyn = $_URL_dyn."&refine.reg_etab_lib=".$_POST['region'];
+    }
 }
-if (isset($_URLetab)){
+//echo $_URL_dyn;
 
+if (isset($_GET['linkScho'])){
+    $_URLetab = $_GET['linkScho'];
 }else{
     $_URLetab = "https://data.enseignementsup-recherche.gouv.fr/api/records/1.0/search/?dataset=fr-esr-principaux-etablissements-enseignement-superieur&rows=323&facet=uai&facet=type_d_etablissement&facet=com_nom&facet=dep_nom&facet=aca_nom&facet=reg_nom&facet=pays_etranger_acheminement";
 }
 
-
-$_URLdyn = $_URLstat;
-if (isset($_POST['niveau'])){
-    $_URLdyn = $_URLdyn."&refine.niveau_lib=".$_POST['niveau'];
-}
-if (isset($_POST['domaine'])){
-    $_URLdyn = $_URLdyn."&refine.sect_disciplinaire_lib=".$_POST['domaine'];
-}
-if (isset($_POST['region'])){
-    $_URLdyn = $_URLdyn."&refine.reg_etab_lib=".$_POST['region'];
-}
-
-$json = file_get_contents($_URLdyn);
+$json = file_get_contents($_URL_dyn);
 $parsed_json = json_decode($json, true);
 $list = $parsed_json['records'];
 
@@ -42,7 +43,7 @@ if (isset($_GET['page'])){
     $page = 1;
 }
 
-$nb = 10;
+$nb = 20;
 $limit = min($nb * $page, $total);
 $begin = max($limit - $nb, 0);
 
@@ -70,7 +71,7 @@ function afficheTab($_begining, $_ending, $_list_var){
         <?php
 
         if ($page>1){
-            echo '<a href="recherche.php?page='.($page-1) .'"> previous</a>';
+            echo '<a href="recherche.php?page='.($page-1).'linkForm='.($_URL_dyn).'linkScho='.($_URLetab).'"> previous</a>';
             echo '<form method = "post" action = "'.htmlspecialchars($_SERVER["PHP_SELF"]).'"</form>';
             echo '<input type="submit" value="Comfirmer" class="submit">';
             echo '</form>';
@@ -79,10 +80,10 @@ function afficheTab($_begining, $_ending, $_list_var){
         echo '<h3>'.$begin.'...'.$limit." / ".$total.'</h3>';
 
         if ($limit != $total) {
-            echo '<a href="recherche.php?page=' . ($page + 1) . '"> next</a>';
-            echo '<form method = "post" action = "'.htmlspecialchars($_SERVER["PHP_SELF"]).'"</form>';
+            echo '<a href="recherche.php?page='.($page + 1).'&linkForm='.($_URL_dyn).'&linkScho='.($_URLetab).'"> next</a>';
+            /*echo '<form method = "post" action = "'.htmlspecialchars($_SERVER["PHP_SELF"]).'"</form>';
             echo '<input type="submit" value="Comfirmer">';
-            echo '</form>';
+            echo '</form>';*/
         }
 
         afficheTab($begin, $limit - $page, $list);

@@ -21,7 +21,6 @@
     </head>
 
 	<body>
-
 	    <h1>TROUVE TA FORMATION !!</h1>
 	    <div>
 	        <FORM  method = "post" action = "recherche.php">
